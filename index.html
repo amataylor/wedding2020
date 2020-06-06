@@ -90,13 +90,19 @@
               </div>
 
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                
+                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                  <input type="text" name="name" />
+                  <input type="email" name="email" />
+                  <textarea name="message"></textarea>
+                  <select name="rankingsel"></select>
+                </form>
                 <div id="readroot" style="display: none">
 
                   <input type="button" value="Remove Guest"
                     onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
                 
-                  <input name="Guest Name" value="Guest Name" />
+                  <input type="text" name="name" value="Guest Name" />
+                  <input type="text" name="email" value="Contact Email" />
                 
                   <select name="rankingsel">
                     <option>Rating</option>
@@ -107,14 +113,14 @@
                     <option value="bad">Bad</option>
                   </select><br /><br />
                 
-                  <textarea rows="5" cols="20" name="review">Short review</textarea>
+                  <textarea rows="5" cols="20" name="message">message</textarea>
                   <br />Radio buttons included to test them in Explorer:<br />
                   <input type="radio" name="something" value="test1" />Test 1<br />
                   <input type="radio" name="something" value="test2" />Test 2
                 
                 </div>
                 
-                <form name="rsvp" method="POST" data-netlify="true">
+                <form name="rsvp" method="POST">
                 
                   <span id="writeroot"></span>
                   <div class="row">
