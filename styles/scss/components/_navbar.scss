@@ -1,11 +1,20 @@
+$nav-anim-length: .9s;
 
-nav{
-    position: fixed;
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
     z-index: 1001;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    padding: 40px;
     a{
-        padding-left: 16px;
-        padding-right: 16px;
+        // padding-left: 16px;
+        // padding-right: 16px;
         text-decoration: none;
         color: $text-black;
         font-family: $open;
@@ -15,4 +24,153 @@ nav{
             transition: .2s ease-in-out;
       }
     }
+    &__section {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__burger {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 99;
+        > span {
+            background: black; // Change icon colour here
+            height: 2px;
+            width: calc(100% - 24px);
+            position: absolute;
+            border-radius: 4px;
+            &:nth-child(1) { animation: nav_closed_anim-1 $nav-anim-length both ease-in-out; }
+            &:nth-child(2) { animation: nav_closed_anim-2 $nav-anim-length both ease-in-out; }
+            &:nth-child(3) { animation: nav_closed_anim-3 $nav-anim-length both ease-in-out; }
+        }
+        
+        &--default {
+            > span {
+                &:nth-child(1) {
+                    animation: none;
+                    transform: translateY(-5px);
+                }
+                &:nth-child(2) {
+                    animation: none;
+                    transform: scaleX(1);
+                }
+                &:nth-child(3) {
+                    animation: none;
+                    transform: translateY(5px);
+                }
+            }
+        }
+        &--toggled {
+            > span {
+                &:nth-child(1) { animation: nav_open_anim-1 $nav-anim-length both ease-in-out; }
+                &:nth-child(2) { animation: nav_open_anim-2 $nav-anim-length both ease-in-out; }
+                &:nth-child(3) { animation: nav_open_anim-3 $nav-anim-length both ease-in-out; }
+            }
+        }
+    }
+    &__list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: $pink-light;
+        border-radius: 8px;
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 24px 0 24px;
+        z-index: 1;
+        animation: list_hide $nav-anim-length both ease-in-out;
+        &__item {
+            margin: 8px 0;
+        }
+        &--default {
+            display: none;
+        }
+        &--toggled {
+            animation: list_show $nav-anim-length both ease-in-out;
+        }
+    }
+    &__rsvp {
+        padding: 16px 24px;
+        background: $scarlet;
+        color: $gold !important;
+        text-align: center;
+        &--desktop {
+            display: none;
+        }
+        &--list {
+            margin: 24px;
+            width: 100%;
+            max-width: 160px;
+        }
+    }
 }   
+
+@media (min-width: 992px) {
+    .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        z-index: 1001;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        height: 200px;
+        padding: 80px;
+        &__section {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &__burger {
+            display: none;
+        }
+        &__list {
+            position: relative;
+            background: transparent;
+            border-radius: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            opacity: 1;
+            z-index: 1;
+            padding: 0;
+            animation: none;
+            &__item {
+                padding-right: 32px;
+            }
+            &--default {
+                display: flex;
+            }
+            &--toggled {
+                animation: none;
+            }
+        }
+        &__rsvp {
+            padding: 16px 24px;
+            background: $scarlet;
+            color: $gold !important;
+            text-align: center;
+            &--desktop {
+                display: flex;
+            }
+            &--list {
+                display: none;
+            }
+        }
+    }   
+}

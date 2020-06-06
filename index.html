@@ -14,7 +14,26 @@
 
     <body>
         <!-- Navigation -->
-        <nav>
+        <nav class="nav">
+
+          <!-- List Items -->
+          <div class="nav__list nav__list--default">
+            <a class="nav__list__item" href="#">Item 1</a>
+            <a class="nav__list__item" href="#">Item 2</a>
+            <a class="nav__list__item" href="#">Item 3</a>
+            <a class="nav__list__item" href="#">Item 4</a>
+            <a class="nav__rsvp nav__rsvp--list">RSVP</a>
+          </div>
+
+          <!-- Mobile - Icon -->
+          <a class="nav__section nav__burger nav__burger--default">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <!-- RSVP -->
+          <a class="nav__section nav__rsvp nav__rsvp--desktop">RSVP</a>
           
         </nav>
         <!-- Main content  -->
@@ -59,41 +78,41 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-0"></div>
               <div class="col-12">
                 <h3>RSVP</h3>
                 <p>We look forward to seeing you! If you have specific dietary restrictions, please make sure it’s noted below.</p>
                 <p>Kindly RSVP by August 31st</p>
               </div>
-              <div class="col-0"></div>
+
+              <div class="col-12">
                 
                   <form>
                     <h4>Guest 1</h4>
                     <div class="form__group">
-                    <div class="field">
-                      <label>First Name</label>
-                      <input></input>
+                      <div class="field">
+                        <label>First Name</label>
+                        <input></input>
+                      </div>
+                      <div class="field">
+                        <label>Last Name</label>
+                        <input></input>
+                      </div>
                     </div>
-                  <div class="field">
-                      <label>Last Name</label>
-                      <input></input>
+                    <div>
+                        <label>Email</label>
+                        <input></input>
+                        <label>Any Food Restrictions?</label>
+                        <input></input>
                     </div>
-                </div>
-                  <div>
-                      <label>Email</label>
-                      <input></input>
-                      <label>Any Food Restrictions?</label>
-                      <input></input>
-                  </div>
-                  <div>
-                    
-                  </div>
                   </form>
+
+                </div>
                 
               
             </div>
           </div>
         </main>
+        <script src="./js/nav.js"></script>
     </body>
 
 </html>

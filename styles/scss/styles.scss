@@ -1,5 +1,6 @@
 @import './helpers/colors';
 @import './helpers/fonts';
+@import './helpers/animations';
 
 @import './components/buttons';
 @import './components/navbar';
@@ -19,6 +20,8 @@ body {
     font-family: $playfair;
     margin: 0;
 }
+
+.hide { display: none; }
 
 .section {
     height: 100vh;
