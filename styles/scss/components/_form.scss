@@ -1,0 +1,25 @@
+.form{
+    &__container{
+      width: 600px;
+    }
+    &__group{
+      display: flex;
+    }
+  }
+  
+  
+  input{
+    height: 24px;
+    width:100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .field{
+    display:block;
+    width:50%;
+    // padding: 12px;
+  }
+  label{
+    width: 100%;
+  }

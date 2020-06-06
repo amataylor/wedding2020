@@ -1,0 +1,70 @@
+@import './helpers/colors';
+@import './helpers/fonts';
+
+@import './components/buttons';
+@import './components/navbar';
+@import './components/intro';
+@import './components/accomodation';
+@import './components/form';
+
+
+* { box-sizing: Border-box }
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $playfair;
+    margin: 0;
+}
+
+.section {
+    height: 100vh;
+    display: block;
+    overflow:hidden;
+
+    &__title{
+        -ms-writing-mode:tb-rl;
+        writing-mode:tb-rl;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: $pink-light;
+    }
+    &__spacer {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 36vh;
+        width: 4px;
+        margin-left: 40px;
+        background-color: $pink-light;
+        overflow: hidden;
+    }
+}
+
+
+.centre{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.venue{
+    
+    &__info{
+    //   transform: skew(20deg);
+      background: $pink-light;
+      padding: 24px;
+      transform: translate(100px);
+      position: relative;
+      z-index: 999;
+    
+    }
+}
+
+
+

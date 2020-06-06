@@ -1,0 +1,9 @@
+$playfair: 'Playfair Display', serif;
+$open: 'Open Sans', sans-serif;
+$script: 'script', $playfair, sans-serif;
+
+
+@font-face {
+    font-family: 'script';
+    src:  url('/assets/fonts/cervanttis.ttf') format('truetype'),
+  }

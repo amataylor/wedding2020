@@ -1,0 +1,263 @@
+@font-face {
+  font-family: 'script';
+  src: url("/assets/fonts/cervanttis.ttf") format("truetype");
+}
+
+.btn {
+  padding: 8px, 16px;
+}
+
+nav {
+  position: fixed;
+  z-index: 1001;
+}
+
+nav a {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+  color: #2c2c2c;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+nav a:hover {
+  color: #FF5A5F;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.image {
+  height: 100vh;
+  width: 100%;
+  margin: auto auto;
+  overflow: hidden;
+  background-image: url("../../../assets/images/00100srPORTRAIT_00100_BURST20200523120644217_COVER.png");
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-position: 35% 50%;
+  background-size: cover;
+  border: 20px solid #D4BCB8;
+}
+
+.intro {
+  font-family: "script", "Playfair Display", serif, sans-serif;
+  font-size: 48px;
+  color: #D4BCB8;
+}
+
+.info {
+  margin-top: 90%;
+}
+
+.info__text {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.invite {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  padding: 100px 20px;
+}
+
+.invite h2 {
+  font-size: 32px;
+  color: #F29A8C;
+}
+
+.invite p {
+  color: #2c2c2c;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .image {
+    border: 40px solid #D4BCB8;
+    background-position: center top;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info {
+    margin-top: 15%;
+    margin-left: 50%;
+  }
+  .info__text {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #fff;
+  }
+}
+
+.accomodation {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #FEF0E6;
+  color: #F29A8C;
+  text-align: center;
+}
+
+.accomodation h2 {
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+}
+
+.accomodation p {
+  font-size: 14px;
+}
+
+.accomodation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accomodation li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.accomodation a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #F29A8C;
+  border-bottom: 2px solid #F29A8C;
+  padding-bottom: 3px;
+}
+
+.accomodation a:visted {
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .accomodation {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #FEF0E6;
+    color: #F29A8C;
+    text-align: center;
+  }
+  .accomodation h2 {
+    font-size: 40px;
+    font-family: "script", "Playfair Display", serif, sans-serif;
+  }
+  .accomodation p {
+    font-size: 14px;
+  }
+  .accomodation ul {
+    list-style: none;
+    padding: 0;
+  }
+  .accomodation li {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .accomodation a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #F29A8C;
+    padding-bottom: 3px;
+  }
+  .accomodation a:hover {
+    border-bottom: 2px solid #F29A8C;
+    padding-bottom: 3px;
+  }
+}
+
+.form__container {
+  width: 600px;
+}
+
+.form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input {
+  height: 24px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.field {
+  display: block;
+  width: 50%;
+}
+
+label {
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: Border-box;
+          box-sizing: Border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+.section {
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+.section__title {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #D4BCB8;
+}
+
+.section__spacer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 36vh;
+  width: 4px;
+  margin-left: 40px;
+  background-color: #D4BCB8;
+  overflow: hidden;
+}
+
+.centre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.venue__info {
+  background: #D4BCB8;
+  padding: 24px;
+  -webkit-transform: translate(100px);
+          transform: translate(100px);
+  position: relative;
+  z-index: 999;
+}
+/*# sourceMappingURL=styles.css.map */

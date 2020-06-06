@@ -1,0 +1,18 @@
+
+nav{
+    position: fixed;
+    z-index: 1001;
+
+    a{
+        padding-left: 16px;
+        padding-right: 16px;
+        text-decoration: none;
+        color: $text-black;
+        font-family: $open;
+        transition: .2s ease-in-out;
+        &:hover{
+            color: $coral;
+            transition: .2s ease-in-out;
+      }
+    }
+}   

@@ -1,0 +1,24 @@
+{
+  "name": "wedding2020",
+  "version": "1.0.0",
+  "description": "Wedsite",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch styles/scss -o styles/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amataylor/wedding2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amataylor/wedding2020/issues"
+  },
+  "homepage": "https://github.com/amataylor/wedding2020#readme"
+}

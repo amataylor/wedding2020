@@ -1,0 +1,78 @@
+.image{
+    
+        height: 100vh;
+        width: 100%;
+        margin: auto auto;
+        overflow: hidden;
+        background-image: url("../../../assets/images/00100srPORTRAIT_00100_BURST20200523120644217_COVER.png");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-position: 35% 50%;
+        background-size: cover;
+        border:20px solid $pink-light;
+}
+
+
+.intro {
+    font-family: $script;
+    font-size: 48px;
+    color: $pink-light;
+}
+
+.info{
+    margin-top: 90%;
+    &__text{
+        font-family: $playfair;
+        font-size: 20px;
+        color: $white;
+    }
+}
+
+.invite{
+    text-align: center;
+    font-family: $playfair;
+    padding: 100px 20px;
+
+    h2{
+        font-size: 32px;
+        color: $coral-light;
+    }
+
+    p{
+        color: $text-black;
+        font-family: $open;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 576px) {
+    
+    
+  }
+  
+  @media (min-width: 768px) {
+
+    .image{
+        border:40px solid $pink-light;
+        background-position: center top;
+    }
+    
+  }
+  
+  @media (min-width: 992px) {
+    
+  }
+  
+  @media (min-width: 1200px) {
+
+    .info{
+        margin-top: 15%;
+        margin-left: 50%;
+        &__text{
+            font-family: $playfair;
+            font-size: 32px;
+            color: $white;
+        }
+    }
+    
+  }
+
