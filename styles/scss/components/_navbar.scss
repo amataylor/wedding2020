@@ -1,4 +1,4 @@
-$nav-anim-length: .9s;
+$nav-anim-length: .4s;
 
 .nav{
     position: absolute;
@@ -39,11 +39,11 @@ $nav-anim-length: .9s;
         position: relative;
         z-index: 99;
         > span {
-            background: black; // Change icon colour here
+            background: $white; // Change icon colour here
             height: 2px;
             width: calc(100% - 24px);
             position: absolute;
-            border-radius: 4px;
+            border-radius: 1px;
             &:nth-child(1) { animation: nav_closed_anim-1 $nav-anim-length both ease-in-out; }
             &:nth-child(2) { animation: nav_closed_anim-2 $nav-anim-length both ease-in-out; }
             &:nth-child(3) { animation: nav_closed_anim-3 $nav-anim-length both ease-in-out; }

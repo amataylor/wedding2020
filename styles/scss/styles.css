@@ -317,26 +317,26 @@
 }
 
 .nav__burger > span {
-  background: black;
+  background: #fff;
   height: 2px;
   width: calc(100% - 24px);
   position: absolute;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 .nav__burger > span:nth-child(1) {
-  -webkit-animation: nav_closed_anim-1 0.9s both ease-in-out;
-          animation: nav_closed_anim-1 0.9s both ease-in-out;
+  -webkit-animation: nav_closed_anim-1 0.4s both ease-in-out;
+          animation: nav_closed_anim-1 0.4s both ease-in-out;
 }
 
 .nav__burger > span:nth-child(2) {
-  -webkit-animation: nav_closed_anim-2 0.9s both ease-in-out;
-          animation: nav_closed_anim-2 0.9s both ease-in-out;
+  -webkit-animation: nav_closed_anim-2 0.4s both ease-in-out;
+          animation: nav_closed_anim-2 0.4s both ease-in-out;
 }
 
 .nav__burger > span:nth-child(3) {
-  -webkit-animation: nav_closed_anim-3 0.9s both ease-in-out;
-          animation: nav_closed_anim-3 0.9s both ease-in-out;
+  -webkit-animation: nav_closed_anim-3 0.4s both ease-in-out;
+          animation: nav_closed_anim-3 0.4s both ease-in-out;
 }
 
 .nav__burger--default > span:nth-child(1) {
@@ -361,18 +361,18 @@
 }
 
 .nav__burger--toggled > span:nth-child(1) {
-  -webkit-animation: nav_open_anim-1 0.9s both ease-in-out;
-          animation: nav_open_anim-1 0.9s both ease-in-out;
+  -webkit-animation: nav_open_anim-1 0.4s both ease-in-out;
+          animation: nav_open_anim-1 0.4s both ease-in-out;
 }
 
 .nav__burger--toggled > span:nth-child(2) {
-  -webkit-animation: nav_open_anim-2 0.9s both ease-in-out;
-          animation: nav_open_anim-2 0.9s both ease-in-out;
+  -webkit-animation: nav_open_anim-2 0.4s both ease-in-out;
+          animation: nav_open_anim-2 0.4s both ease-in-out;
 }
 
 .nav__burger--toggled > span:nth-child(3) {
-  -webkit-animation: nav_open_anim-3 0.9s both ease-in-out;
-          animation: nav_open_anim-3 0.9s both ease-in-out;
+  -webkit-animation: nav_open_anim-3 0.4s both ease-in-out;
+          animation: nav_open_anim-3 0.4s both ease-in-out;
 }
 
 .nav__list {
@@ -395,8 +395,8 @@
           align-items: center;
   padding: 24px 24px 0 24px;
   z-index: 1;
-  -webkit-animation: list_hide 0.9s both ease-in-out;
-          animation: list_hide 0.9s both ease-in-out;
+  -webkit-animation: list_hide 0.4s both ease-in-out;
+          animation: list_hide 0.4s both ease-in-out;
 }
 
 .nav__list__item {
@@ -408,8 +408,8 @@
 }
 
 .nav__list--toggled {
-  -webkit-animation: list_show 0.9s both ease-in-out;
-          animation: list_show 0.9s both ease-in-out;
+  -webkit-animation: list_show 0.4s both ease-in-out;
+          animation: list_show 0.4s both ease-in-out;
 }
 
 .nav__rsvp {
@@ -578,6 +578,13 @@
   color: #2c2c2c;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .image {
+    border: 40px solid #D4BCB8;
+    background-position: center top;
+  }
 }
 
 @media (min-width: 768px) {

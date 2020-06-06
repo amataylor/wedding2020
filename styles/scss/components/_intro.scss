@@ -45,7 +45,10 @@
 }
 
 @media (min-width: 576px) {
-    
+    .image{
+        border:40px solid $pink-light;
+        background-position: center top;
+    }
     
   }
   
