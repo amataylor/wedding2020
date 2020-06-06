@@ -1,0 +1,60 @@
+.rsvp{
+    
+    &__logo{
+        font-size: 64px;
+        text-align: center;
+    }
+    &__kindly {
+        color: $coral-light;
+        text-align: center;
+        font-size: 24px;
+    }
+    &__text{
+        text-align: center;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+
+}
+
+@media (min-width: 576px) {
+    
+    
+}
+
+@media (min-width: 768px) {
+
+
+  
+}
+
+@media (min-width: 992px) {
+   
+    
+  
+}
+
+@media (min-width: 1200px) {
+
+    .rsvp{
+    
+        &__logo{
+            font-size: 88px;
+            text-align: center;
+        }
+        &__kindly {
+            color: $coral-light;
+            text-align: center;
+            font-size: 36px;
+        }
+        &__text{
+            text-align: center;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+    
+    
+    }
+  
+}

@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="#">
         <link href="./styles/css/bootstrap-grid.css" type="text/css" rel="stylesheet">
         <link href="./styles/scss/styles.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:100;300;400;600;800|Playfair+Display:400,500,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Cormorant+Garamond:wght@300;400;500;600;700|Poppins:100;300;400;600;800|Playfair+Display:400,500,700,900&display=swap" rel="stylesheet">
     </head>
     
 
@@ -49,8 +49,8 @@
             <div class="invite row">
               <div class="col-2"></div>
               <div class="col-8">
-                <h2> Adam & Helen Invite you to join them for the celebration of their marriage</h2>
-                <p>We'll start with a humanist ceremony followed by drinks and  the reception in the barns. We ask that all guest arrive and by 12:00, the Ceremony starts at 1pm.
+                <h2> Adam & Helen <br>  Invite you to join them for the celebration of their marriage</h2>
+                <!-- <p>We'll start with a humanist ceremony followed by drinks and  the reception in the barns. We ask that all guest arrive and by 12:00, the Ceremony starts at 1pm. -->
               </div>
               <div class="col-2"></div>
             </div>
@@ -58,7 +58,7 @@
           <div class="container-fluid accomodation">
             <div class="container">
               <p>Where to stay</p>
-              <h2>Accommodations</h2>
+              <h2>Accommodation</h2>
               <p>The accomodations listed below are displayed in distance nearest to the venue</p>
               <ul>
                 <li><a href="http://www.theprioryscorton.co.uk/" target="_blank">Priory Inn Hotel</a></li>
@@ -78,33 +78,55 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-12">
-                <h3>RSVP</h3>
-                <p>We look forward to seeing you! If you have specific dietary restrictions, please make sure it’s noted below.</p>
-                <p>Kindly RSVP by August 31st</p>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="rsvp__logo">
+                  <p>R&nbsp&nbsp.&nbsp&nbspS</p>
+                </div>
+                <div class="rsvp__logo">
+                  <p>V&nbsp&nbsp.&nbsp&nbspP</p>
+                </div>
+                <p class="rsvp__text">We look forward to seeing you! If you have specific dietary requirements, please make sure it’s noted below.</p>
+                <p class="rsvp__kindly">Kindly RSVP by August 31st</p>
               </div>
 
-              <div class="col-12">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 
-                  <form>
-                    <h4>Guest 1</h4>
-                    <div class="form__group">
-                      <div class="field">
-                        <label>First Name</label>
-                        <input></input>
-                      </div>
-                      <div class="field">
-                        <label>Last Name</label>
-                        <input></input>
-                      </div>
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input></input>
-                        <label>Any Food Restrictions?</label>
-                        <input></input>
-                    </div>
-                  </form>
+                <div id="readroot" style="display: none">
+
+                  <input type="button" value="Remove Guest"
+                    onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+                
+                  <input name="Guest Name" value="Guest Name" />
+                
+                  <select name="rankingsel">
+                    <option>Rating</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="ok">OK</option>
+                    <option value="poor">Poor</option>
+                    <option value="bad">Bad</option>
+                  </select><br /><br />
+                
+                  <textarea rows="5" cols="20" name="review">Short review</textarea>
+                  <br />Radio buttons included to test them in Explorer:<br />
+                  <input type="radio" name="something" value="test1" />Test 1<br />
+                  <input type="radio" name="something" value="test2" />Test 2
+                
+                </div>
+                
+                <form name="rsvp" method="POST" data-netlify="true">
+                
+                  <span id="writeroot"></span>
+                  <div class="row">
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                
+                  <input type="button" value="Add Guest Details" onclick="moreFields()"/>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <input type="submit" value="Send form" />
+                </div>
+              </div>
+                </form>
 
                 </div>
                 
@@ -113,6 +135,7 @@
           </div>
         </main>
         <script src="./js/nav.js"></script>
+        <script src="./js/form.js"></script>
     </body>
 
 </html>
