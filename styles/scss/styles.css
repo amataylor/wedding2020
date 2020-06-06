@@ -275,14 +275,14 @@
 
 .nav a {
   text-decoration: none;
-  color: #2c2c2c;
+  color: #fff;
   font-family: "Open Sans", sans-serif;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
 
 .nav a:hover {
-  color: #FF5A5F;
+  color: #fff;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
@@ -483,12 +483,13 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
     height: 100%;
     opacity: 1;
     z-index: 1;
@@ -497,7 +498,8 @@
             animation: none;
   }
   .nav__list__item {
-    padding-right: 32px;
+    margin-right: 40px;
+    margin-left: 40px;
   }
   .nav__list--default {
     display: -webkit-box;
@@ -507,6 +509,12 @@
   .nav__list--toggled {
     -webkit-animation: none;
             animation: none;
+  }
+  .nav__list a {
+    color: #FEF0E6;
+  }
+  .nav__list a:hover {
+    color: #fff;
   }
   .nav__rsvp {
     padding: 16px 24px;
@@ -539,7 +547,7 @@
 
 .intro {
   font-family: "script", "Playfair Display", serif, sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   color: #D4BCB8;
 }
 
@@ -577,6 +585,23 @@
   }
 }
 
+@media (min-width: 992px) {
+  .info {
+    margin-top: 30%;
+    margin-left: 45%;
+  }
+  .info__text {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #fff;
+  }
+  .intro {
+    font-family: "script", "Playfair Display", serif, sans-serif;
+    font-size: 64px;
+    color: #D4BCB8;
+  }
+}
+
 @media (min-width: 1200px) {
   .info {
     margin-top: 15%;
@@ -586,6 +611,11 @@
     font-family: "Playfair Display", serif;
     font-size: 32px;
     color: #fff;
+  }
+  .intro {
+    font-family: "script", "Playfair Display", serif, sans-serif;
+    font-size: 88px;
+    color: #D4BCB8;
   }
 }
 
