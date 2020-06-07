@@ -18,11 +18,11 @@
 
           <!-- List Items -->
           <div class="nav__list nav__list--default">
-            <a class="nav__list__item" href="#">The Venue</a>
-            <a class="nav__list__item" href="#">Where To Stay</a>
-            <a class="nav__list__item" href="#">Item 3</a>
-            <a class="nav__list__item" href="#">Item 4</a>
-            <a class="nav__rsvp nav__rsvp--list">RSVP</a>
+            <a class="nav__list__item" href="#venue">The Venue</a>
+            <a class="nav__list__item" href="#accomodation">Where To Stay</a>
+            <a class="nav__list__item" href="#info">Info</a>
+            <a class="nav__list__item" href="#rsvp">RSVP</a>
+            <!-- <a class="nav__rsvp nav__rsvp--list" href="#rsvp">RSVP</a> -->
           </div>
 
           <!-- Mobile - Icon -->
@@ -33,7 +33,7 @@
           </a>
 
           <!-- RSVP -->
-          <a class="nav__section nav__rsvp nav__rsvp--desktop">RSVP</a>
+          <!-- <a class="nav__section nav__rsvp nav__rsvp--desktop">RSVP</a> -->
           
         </nav>
         <!-- Main content  -->
@@ -45,21 +45,30 @@
               <p class="info__text centre">Are getting married</p>
             </div>
           </div>
-          <div class="container">
-            <div class="invite row">
-              <div class="col-2"></div>
-              <div class="col-8">
-                <h2> Adam & Helen <br>  Invite you to join them for the celebration of their marriage</h2>
-                <!-- <p>We'll start with a humanist ceremony followed by drinks and  the reception in the barns. We ask that all guest arrive and by 12:00, the Ceremony starts at 1pm. -->
+          <div class="container invite" id="venue">
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col-10">
+                <p class="invite__celebrate"> Adam & Helen <br>  Invite you to join them for the celebration of their marriage</p>
               </div>
-              <div class="col-2"></div>
+              <div class="col-1"></div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <p class="invite__subtitle">Where?</p>
+                <p class="invite__info">Wyresdale Park<br>Snowhill Lane<br>Preston<br>Lancashire<br>PR3 1BA</p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <p class="invite__subtitle">When?</p>
+                <p class="invite__info"> We ask that all Guests arrive at 12 Midday. The Ceremony will begin at 1 O'Clock. Wedding Breakfast & Reception to follow</p>
+              </div>
             </div>
           </div>
-          <div class="container-fluid accomodation">
+          <div class="container-fluid accomodation" id="accomodation">
             <div class="container">
-              <p>Where to stay</p>
-              <h2>Accommodation</h2>
-              <p>The accomodations listed below are displayed in distance nearest to the venue</p>
+              <p class="black">Where to stay</p>
+              <p class="title">Accommodation</p>
+              <p class="black">The accomodations listed below are displayed in distance nearest to the venue</p>
               <ul>
                 <li><a href="http://www.theprioryscorton.co.uk/" target="_blank">Priory Inn Hotel</a></li>
                 <li><a href="https://www.middlehollycottage.co.uk/" target="_blank">Middle Holly Cottage</a></li>
@@ -75,8 +84,39 @@
               </ul>
             </div>
           </div>
-
-          <div class="container">
+          <div class="container-fluid transport" id="info">
+            <div class="container">
+              <p class="black">Getting Home Safe</p>
+              <p class="title">Transport</p>
+              <p class="black">We also recommend the following local taxi services to help you get from A to B. <br>Taxi services are limited in this area so pre-booking is essential:</p>
+            
+             
+              <ul>
+                <li>Garstang Cars - 01995 601 111</li>
+                <li>Lancaster Taxis - 01524 912 323</li>
+                <li>A1 Taxis - 01524 356 66</li>
+                <li>Coastal Taxis - 01524 600 00</li>
+              </ul>
+            
+         
+          </div>
+          </div>
+          <div class="container-fluid accomodation">
+            <div class="container">
+              <p class="title">Children</p>
+              <p class="black">As much as we would like to invite all the children of our friends, it is only possible to accommodate the children of close family.</p>
+            </div>
+          </div>
+          <div class="container-fluid transport">
+            <div class="container">
+              <p class="title">A Note on Gifts</p>
+              <p class="black">If you were thinking of giving a git to help u son our way, A Gift of cash towards our honeymoon would really make our day. However, if you would prefer to purchase a gift, feel free to surprise us in your own way.</p>
+            
+         
+          </div>
+          </div>
+          <!-- RSVP -->
+          <div class="container" id="rsvp">
             <div class="row">
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="rsvp__logo">
@@ -90,50 +130,54 @@
               </div>
 
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <form name="contact" netlify hidden>
-                  <input type="text" name="name" />
-                  <input type="email" name="email" />
-                  <textarea name="message"></textarea>
-                  <select name="rankingsel"></select>
-                </form>
-                <div id="readroot" style="display: none">
-
-                  <input type="button" value="Remove Guest"
-                    onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
-                
-                  <input type="text" name="name" value="Guest Name" />
-                  <input type="text" name="email" value="Contact Email" />
-                
-                  <select name="rankingsel">
-                    <option>Rating</option>
-                    <option value="excellent">Excellent</option>
-                    <option value="good">Good</option>
-                    <option value="ok">OK</option>
-                    <option value="poor">Poor</option>
-                    <option value="bad">Bad</option>
-                  </select><br /><br />
-                
-                  <textarea rows="5" cols="20" name="message">message</textarea>
-                  <br />Radio buttons included to test them in Explorer:<br />
-                  <input type="radio" name="something" value="test1" />Test 1<br />
-                  <input type="radio" name="something" value="test2" />Test 2
-                
-                </div>
-                
-                <form name="rsvp" method="POST">
-                
-                  <span id="writeroot"></span>
-                  <div class="row">
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                
-                  <input type="button" value="Add Guest Details" onclick="moreFields()"/>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <input type="submit" value="Send form" />
-                </div>
+                <div class="outer">
+                  <input class="trigger" type="checkbox" name="field1" id="field1">
+                  <input class="trigger" type="checkbox" name="field2" id="field2">
+                  <input class="trigger" type="checkbox" name="field3" id="field3">
+                  <input class="trigger" type="checkbox" name="field4" id="field4">
+                  <label class="label-trigger" for="field1">Step 1 - Click to start</label>
+                  <form class="hidden-fields">
+                      <div class="wrap wrap1">
+                          <fieldset>
+                              <legend>Fieldset 1</legend>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                          </fieldset>
+                          <label class="label-trigger" for="field2">Click for step 2</label>
+                      </div>
+                      <div class="wrap wrap2">
+                          <fieldset>
+                              <legend>Fieldset 2</legend>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                          </fieldset>
+                          <label class="label-trigger" for="field3">Click for step 3</label>
+                      </div>
+                      <div class="wrap wrap3">
+                          <fieldset>
+                              <legend>Fieldset 3</legend>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                          </fieldset>
+                          <label class="label-trigger" for="field4">Click for step 4</label>
+                      </div>
+                      <div class="wrap wrap4">
+                          <fieldset>
+                              <legend>Fieldset 4</legend>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                              <p>some form elements here</p>
+                          </fieldset>
+                      </div>
+                  </form>
               </div>
-                </form>
-
                 </div>
                 
               

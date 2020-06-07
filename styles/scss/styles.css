@@ -311,7 +311,7 @@ button:active {
 .nav a {
   text-decoration: none;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
@@ -428,7 +428,7 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 24px 24px 0 24px;
+  padding: 24px 24px 24px 24px;
   z-index: 1;
   -webkit-animation: list_hide 0.4s both ease-in-out;
           animation: list_hide 0.4s both ease-in-out;
@@ -450,7 +450,7 @@ button:active {
 .nav__rsvp {
   padding: 16px 24px;
   background: #87081F;
-  color: #8F7242 !important;
+  color: #fff !important;
   text-align: center;
 }
 
@@ -547,6 +547,7 @@ button:active {
   }
   .nav__list a {
     color: #FEF0E6;
+    font-size: 20px;
   }
   .nav__list a:hover {
     color: #fff;
@@ -554,7 +555,7 @@ button:active {
   .nav__rsvp {
     padding: 16px 24px;
     background: #87081F;
-    color: #8F7242 !important;
+    color: #fff !important;
     text-align: center;
   }
   .nav__rsvp--desktop {
@@ -593,26 +594,29 @@ button:active {
 }
 
 .info__text {
-  font-family: "Playfair Display", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: #fff;
 }
 
 .invite {
   text-align: center;
-  font-family: "Playfair Display", serif;
-  padding: 200px 20px;
+  font-family: "Cormorant Garamond", serif;
+  padding: 100px 20px;
 }
 
-.invite h2 {
-  font-size: 32px;
+.invite__celebrate {
+  font-size: 36px;
   color: #F29A8C;
 }
 
-.invite p {
-  color: #2c2c2c;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+.invite__subtitle {
+  font-size: 18px;
+}
+
+.invite__info {
+  font-size: 24px;
+  color: #F29A8C;
 }
 
 @media (min-width: 576px) {
@@ -635,7 +639,7 @@ button:active {
     margin-left: 45%;
   }
   .info__text {
-    font-family: "Playfair Display", serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 32px;
     color: #fff;
   }
@@ -644,9 +648,25 @@ button:active {
     font-size: 64px;
     color: #D4BCB8;
   }
+  .invite {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    padding: 200px 20px;
+  }
+  .invite__celebrate {
+    font-size: 64px;
+    color: #F29A8C;
+  }
+  .invite__subtitle {
+    font-size: 18px;
+  }
+  .invite__info {
+    font-size: 36px;
+    color: #F29A8C;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) and (min-width: 1200px) {
   .image {
     height: 100vh;
   }
@@ -655,7 +675,7 @@ button:active {
     margin-left: 50%;
   }
   .info__text {
-    font-family: "Playfair Display", serif;
+    font-family: "Cormorant Garamond", serif;
     font-size: 32px;
     color: #fff;
   }
@@ -679,13 +699,10 @@ button:active {
   font-family: "Cormorant Garamond", serif;
 }
 
-.accomodation p {
-  font-size: 14px;
-}
-
 .accomodation ul {
   list-style: none;
   padding: 0;
+  margin-top: 30px;
 }
 
 .accomodation li {
@@ -705,24 +722,28 @@ button:active {
   color: #fff;
 }
 
+.title {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+}
+
 @media (min-width: 992px) {
   .accomodation {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: #FEF0E6;
     color: #F29A8C;
     text-align: center;
   }
   .accomodation h2 {
     font-size: 40px;
-    font-family: "script", "Cormorant Garamond", serif, sans-serif;
-  }
-  .accomodation p {
-    font-size: 14px;
+    font-family: "Cormorant Garamond", serif;
   }
   .accomodation ul {
     list-style: none;
     padding: 0;
+    margin-top: 60px;
   }
   .accomodation li {
     margin-top: 16px;
@@ -730,7 +751,7 @@ button:active {
   }
   .accomodation a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     color: #F29A8C;
     border-bottom: 0px solid #F29A8C;
     padding-bottom: 3px;
@@ -738,6 +759,11 @@ button:active {
   .accomodation a:hover {
     border-bottom: 2px solid #F29A8C;
     padding-bottom: 3px;
+  }
+  .title {
+    font-size: 64px;
+    margin-top: 0px;
+    margin-bottom: 24px;
   }
 }
 
@@ -775,6 +801,66 @@ label {
   width: 100%;
 }
 
+.hidden-fields .wrap:not(#foo) {
+  visibility: hidden;
+}
+
+.hidden-fields fieldset {
+  border: 1px solid #000;
+  background: #f5f5f5;
+}
+
+.wrap:not(#foo) {
+  height: 0;
+  width: 0;
+  overflow: hiden;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.trigger {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  outline: 0;
+}
+
+.label-trigger {
+  display: none;
+}
+
+.label-trigger:not(#foo) {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 0 0;
+}
+
+.label-trigger:hover {
+  text-decoration: underline;
+}
+
+#field1:checked ~ .hidden-fields .wrap1,
+#field2:checked ~ .hidden-fields .wrap2,
+#field3:checked ~ .hidden-fields .wrap3,
+#field4:checked ~ .hidden-fields .wrap4 {
+  opacity: 1;
+  padding: 10px;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  visibility: visible;
+}
+
+#field1:checked ~ .label-trigger,
+#field2:checked ~ .hidden-fields .wrap1 .label-trigger,
+#field3:checked ~ .hidden-fields .wrap2 .label-trigger,
+#field4:checked ~ .hidden-fields .wrap3 .label-trigger {
+  visibility: hidden;
+}
+
 .rsvp__logo {
   font-size: 64px;
   text-align: center;
@@ -809,6 +895,75 @@ label {
   }
 }
 
+.transport {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: #F29A8C;
+  text-align: center;
+}
+
+.transport h2 {
+  font-size: 40px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.transport ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.transport li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.transport a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #F29A8C;
+  border-bottom: 2px solid #F29A8C;
+  padding-bottom: 3px;
+}
+
+.transport a:visted {
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  .transport {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #F29A8C;
+    text-align: center;
+  }
+  .transport h2 {
+    font-size: 40px;
+  }
+  .transport ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px;
+  }
+  .transport li {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+  .transport a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #F29A8C;
+    border-bottom: 0px solid #F29A8C;
+    padding-bottom: 3px;
+  }
+  .transport a:hover {
+    border-bottom: 2px solid #F29A8C;
+    padding-bottom: 3px;
+  }
+}
+
 * {
   -webkit-box-sizing: Border-box;
           box-sizing: Border-box;
@@ -817,6 +972,7 @@ label {
 html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -879,5 +1035,12 @@ body {
           transform: translate(100px);
   position: relative;
   z-index: 999;
+}
+
+.black {
+  color: #2c2c2c;
+  margin-bottom: 32px;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 /*# sourceMappingURL=styles.css.map */

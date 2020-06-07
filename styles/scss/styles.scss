@@ -8,6 +8,7 @@
 @import './components/accomodation';
 @import './components/form';
 @import './components/rsvp';
+@import './components/transport';
 
 
 * { box-sizing: Border-box }
@@ -15,6 +16,7 @@
 html {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -69,6 +71,13 @@ body {
     
     }
 }
+
+.black{
+    color: $text-black ;
+    margin-bottom: 32px;
+    padding-left: 25%;
+    padding-right: 25%;
+    }
 
 
 

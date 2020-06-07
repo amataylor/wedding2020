@@ -31,3 +31,52 @@
   label{
     width: 100%;
   }
+
+  .hidden-fields .wrap:not(#foo) {
+	visibility:hidden
+}
+.hidden-fields fieldset {
+	border:1px solid #000;
+	background:#f5f5f5;
+}
+.wrap:not(#foo) {
+	height:0;
+	width:0;
+	overflow:hiden;
+	opacity:0;
+	-webkit-transition:opacity .5s ease;
+	-moz-transition:opacity 1s ease;
+	transition:opacity 1s ease;
+}
+.trigger {
+	height:0;
+	width:0;
+	overflow:hidden;
+	visibility:hidden;
+	outline:0;
+}
+.label-trigger{display:none}
+.label-trigger:not(#foo) {
+	display:inline-block;
+	cursor:pointer;
+	margin:10px 0 0;
+}
+.label-trigger:hover {
+	text-decoration:underline;
+}
+#field1:checked ~ .hidden-fields .wrap1,
+#field2:checked ~ .hidden-fields .wrap2,
+#field3:checked ~ .hidden-fields .wrap3,
+#field4:checked ~ .hidden-fields .wrap4 {
+	opacity:1;
+	padding:10px;
+	height:auto;
+	width:auto;
+	overflow:visible;
+	visibility:visible;
+}
+
+#field1:checked ~ .label-trigger,
+#field2:checked ~ .hidden-fields .wrap1 .label-trigger,
+#field3:checked ~ .hidden-fields .wrap2 .label-trigger,
+#field4:checked ~ .hidden-fields .wrap3 .label-trigger {visibility:hidden}

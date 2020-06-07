@@ -21,7 +21,7 @@
 .info{
     margin-top: 90%;
     &__text{
-        font-family: $playfair;
+        font-family: $cormont;
         font-size: 20px;
         color: $white;
     }
@@ -29,18 +29,19 @@
 
 .invite{
     text-align: center;
-    font-family: $playfair;
-    padding: 200px 20px;
+    font-family: $cormont;
+    padding: 100px 20px;
 
-    h2{
-        font-size: 32px;
+    &__celebrate{
+        font-size: 36px;
         color: $coral-light;
     }
-
-    p{
-        color: $text-black;
-        font-family: $open;
-        font-size: 16px;
+    &__subtitle{
+        font-size: 18px;
+    }
+    &__info{
+        font-size: 24px;
+        color: $coral-light;
     }
 }
 
@@ -67,7 +68,7 @@
         margin-top: 30%;
         margin-left: 45%;
         &__text{
-            font-family: $playfair;
+            font-family: $cormont;
             font-size: 32px;
             color: $white;
         }
@@ -78,7 +79,24 @@
         font-size:64px;
         color: $pink-light;
     }
+
+    .invite{
+        text-align: center;
+        font-family: $cormont;
+        padding: 200px 20px;
     
+    
+        &__celebrate{
+            font-size: 64px;
+            color: $coral-light;
+        }
+        &__subtitle{
+            font-size: 18px;
+        }
+        &__info{
+            font-size: 36px;
+            color: $coral-light;
+        }
   }
   
   @media (min-width: 1200px) {
@@ -91,7 +109,7 @@
         margin-top: 15%;
         margin-left: 50%;
         &__text{
-            font-family: $playfair;
+            font-family: $cormont;
             font-size: 32px;
             color: $white;
         }
@@ -104,4 +122,5 @@
     }
     
   }
+}
 

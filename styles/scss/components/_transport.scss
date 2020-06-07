@@ -1,7 +1,6 @@
-.accomodation{
+.transport{
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: $pink-lighter;
     color: $coral-light;
     text-align: center;
 
@@ -9,9 +8,9 @@
         font-size: 40px;
         font-family: $cormont;
     }
+    
    
 
-  
     ul{
         list-style: none;
         padding: 0;
@@ -21,6 +20,7 @@
     li{
         margin-top: 16px;
         margin-bottom: 16px;
+        font-size : 18px;
     }
     
     a{
@@ -37,13 +37,6 @@
     }
 }
 
-.title{
-        
-    text-align: center;
-    font-family: $cormont;
-    font-size: 32px;
-}
-
 @media (min-width: 576px) {
     
     
@@ -56,19 +49,19 @@
 }
 
 @media (min-width: 992px) {
-    .accomodation{
+    .transport{
         padding-top: 100px;
         padding-bottom: 100px;
-        background-color: $pink-lighter;
+
         color: $coral-light;
         text-align: center;
     
         h2{
             font-size: 40px;
-            font-family: $cormont;
         }
         
-        
+       
+    
         ul{
             list-style: none;
             padding: 0;
@@ -78,11 +71,12 @@
         li{
             margin-top: 16px;
             margin-bottom: 16px;
+            font-size : 24px;
         }
         
         a{
             text-decoration: none;
-            font-size: 24px;
+            font-size: 18px;
             color: $coral-light;
             border-bottom: 0px solid $coral-light;
             padding-bottom: 3px;
@@ -94,16 +88,8 @@
                 padding-bottom: 3px;
             }
         }
-       
     
   
-}
-.title{
-        
-            
-    font-size: 64px;
-    margin-top: 0px;
-    margin-bottom: 24px;
 }
 
 @media (min-width: 1200px) {

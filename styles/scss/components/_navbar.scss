@@ -17,7 +17,7 @@ $nav-anim-length: .4s;
         // padding-right: 16px;
         text-decoration: none;
         color: $white;
-        font-family: $open;
+        font-family: $cormont;
         transition: .2s ease-in-out;
         &:hover{
             color: $white;
@@ -84,7 +84,7 @@ $nav-anim-length: .4s;
         opacity: 0;
         flex-direction: column;
         align-items: center;
-        padding: 24px 24px 0 24px;
+        padding: 24px 24px 24px 24px;
         z-index: 1;
         animation: list_hide $nav-anim-length both ease-in-out;
         &__item {
@@ -100,7 +100,7 @@ $nav-anim-length: .4s;
     &__rsvp {
         padding: 16px 24px;
         background: $scarlet;
-        color: $gold !important;
+        color: $white !important;
         text-align: center;
         &--desktop {
             display: none;
@@ -164,6 +164,7 @@ $nav-anim-length: .4s;
             }
             a{
                 color: $pink-lighter;
+                font-size: 20px;
                 &:hover{
                     color: $white;
                 }
@@ -172,7 +173,7 @@ $nav-anim-length: .4s;
         &__rsvp {
             padding: 16px 24px;
             background: $scarlet;
-            color: $gold !important;
+            color: $white !important;
             text-align: center;
             &--desktop {
                 display: flex;
