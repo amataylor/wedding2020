@@ -145,103 +145,137 @@
           <p class="rsvp__kindly">Kindly RSVP by August 14th 2020</p>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
           <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <!--<select name="Attending" id="attending" placeholder="Choose one" required>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>-->
+            <fieldset id="guest1">
+              <input type="text" name="name" />
+              <select name="Starter1" id="starter1" placeholder="Select Starter" required></select>
+              <select name="Main1" id="main1" placeholder="Select Main Course" required></select>
+              <select name="Dessert1" id="dessert1" placeholder="Select Main Course" required></select>
+            </fieldset>
+            <fieldset id="guest2">
+              <input type="text" name="name" />
+              <select name="Starter2" id="starter2" placeholder="Select Starter" required></select>
+              <select name="Main2" id="main2" placeholder="Select Main Course" required></select>
+              <select name="Dessert2" id="dessert2" placeholder="Select Main Course" required></select>
+            </fieldset>
+            <fieldset id="guest3">
+              <input type="text" name="name" />
+              <select name="Starter3" id="starter3" placeholder="Select Starter" required></select>
+              <select name="Main3" id="main3" placeholder="Select Main Course" required></select>
+              <select name="Dessert3" id="dessert3" placeholder="Select Main Course" required></select>
+            </fieldset>
+            <fieldset id="guest4">
+              <input type="text" name="name" />
+              <select name="Starter4" id="starter4" placeholder="Select Starter" required></select>
+              <select name="Main4" id="main4" placeholder="Select Main Course" required></select>
+              <select name="Dessert4" id="dessert4" placeholder="Select Main Course" required></select>
+            </fieldset>
+            <select name="Attending" id="attending" placeholder="Choose one" required></select>
             <input type="email" name="email" />
             <textarea name="message"></textarea>
-            <!--<select name="Starter" id="starter" placeholder="Select Starter" required>
-              <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
-              <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
-              <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
-              <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
-              <option value="kids">Kids</option>
-            </select>-->
-            <!--<select name="Main" id="main" placeholder="Select Main Course" required>
-              <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
-              <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
-              <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
-              <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
-              <option value="kids">Kids</option>
-            </select>-->
-            <select name="Dessert" id="dessert" placeholder="Select Main Course" required >
-              <!-- <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
-              <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
-              <option value="Cheescake">Winter Berry Cheesecake</option>
-              <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
-              <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
-              <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
-              <option value="Kids">Kids</option> -->
-            </select>
           </form>
 
           <div id="root"></div>
           <script type="text/babel">
 
+            class GuestForm extends React.Component {
+
+              constructor() {
+                super();
+                this.state = {
+                  guests: [1]
+                }
+              }
+
+              render() {
+
+                return <div>
+                  <form name="contact" method="post">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p> {this.state.guests.length} Guest(s) </p>
+                    <p>
+                      <label>Your Name: <input type="text" name="name" /></label>
+                    </p>
+                    <p>
+                      <label>Are You Attending?: <div class="custom-select">
+                        <select name="Attending" id="attending" placeholder="Choose one" required>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                        </select>
+                      </div></label>
+                    </p>
+                    <p>
+                      <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    {this.state.guests.map(guest => {
+                      return <div>
+                        <h1>Guest {guest}</h1>
+                        <p>
+                          <label>Guest {guest} Starter Choice: <div class="custom-select">
+                            <select name={"Starter" + guest} id={"starter" + guest} placeholder="Select Starter" required>
+                              <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
+                              <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
+                              <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
+                              <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
+                              <option value="kids">Kids</option>
+                            </select>
+                          </div></label>
+                        </p>
+                        <p>
+                          <label>Guest {guest} Main Course Choice: <div class="custom-select">
+                            <select name={"Main" + guest} id={"main" + guest} placeholder="Select Main Course" required>
+                              <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
+                              <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
+                              <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
+                              <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
+                              <option value="kids">Kids</option>
+                            </select>
+                          </div></label>
+                        </p>
+                        <p>
+                          <label>Guest {guest} Dessert Choice: <div class="custom-select">
+                            <select name={"Dessert" + guest} id={"dessert" + guest} placeholder="Select Main Course" required>
+                              <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
+                              <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
+                              <option value="Cheescake">Winter Berry Cheesecake</option>
+                              <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
+                              <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
+                              <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
+                              <option value="Kids">Kids</option>
+                            </select>
+                          </div></label>
+                        </p>
+                        <p>
+                          <label>Guest {guest} Any Dietary Requirements?: <textarea name="message"></textarea></label>
+                        </p>
+                      </div>
+                    })}
+
+                    <p>
+                      <button type="submit">Send</button>
+                    </p>
+                  </form>
+                  <p>
+                    <button type="submit" onClick={() => {
+                      const newGuest = this.state.guests.length + 1;
+                      const guests = this.state.guests;
+                      guests.push(newGuest);
+                      this.setState({ guests });
+                    }}>
+                      Add Guest {this.state.guests.length + 1}
+                    </button>
+                  </p>
+                </div>
+              }
+            };
+
             ReactDOM.render(
-              <form name="contact" method="post">
-                <input type="hidden" name="form-name" value="contact" />
-                <p> Guest 1 </p>
-                <p>
-                  <label>Your Name: <input type="text" name="name" /></label>
-                </p>
-                <p>
-                  <label>Are You Attending?: <div class="custom-select">
-                    <select name="Attending" id="attending" placeholder="Choose one" required>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
-                    </select>
-                  </div></label>
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                  <label>Starter Choice: <div class="custom-select">
-                    <select name="Starter" id="starter" placeholder="Select Starter" required>
-                      <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
-                      <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
-                      <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
-                      <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
-                      <option value="kids">Kids</option>
-                    </select>
-                  </div></label>
-                </p>
-                <p>
-                  <label>Main Course Choice: <div class="custom-select">
-                    <select name="Main" id="main" placeholder="Select Main Course" required>
-                      <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
-                      <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
-                      <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
-                      <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
-                      <option value="kids">Kids</option>
-                    </select>
-                  </div></label>
-                </p>
-                <p>
-                  <label>Dessert Choice: <div class="custom-select">
-                    <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
-                      <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
-                      <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
-                      <option value="Cheescake">Winter Berry Cheesecake</option>
-                      <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
-                      <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
-                      <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
-                      <option value="Kids">Kids</option>
-                    </select>
-                  </div></label>
-                </p>
-                <p>
-                  <label>Any Dietary Requirements?: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>,
-              document.getElementById("root")
+              <div>
+                <h1>Form</h1>
+                <GuestForm></GuestForm>
+              </div>,
+              document.getElementById('root')
             );
 
           </script>
@@ -262,7 +296,7 @@
     </div>
   </main>
   <script src="./js/nav.js"></script>
-  <script src="./js/form.js"></script>
+  <!-- <script src="./js/form.js"></script> -->
 </body>
 
 </html>
