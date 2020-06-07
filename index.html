@@ -1,258 +1,268 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Taylor-Bird Wedding 2020</title>
-        <meta name="description" content="The Taylor-Bird Wedding Info">
-        <link rel="shortcut icon" href="#">
-        <link href="./styles/css/bootstrap-grid.css" type="text/css" rel="stylesheet">
-        <link href="./styles/scss/styles.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Cormorant+Garamond:wght@300;400;500;600;700|Poppins:100;300;400;600;800|Playfair+Display:400,500,700,900&display=swap" rel="stylesheet">
-        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    </head>
-    
 
-    <body>
-        <!-- Navigation -->
-        <nav class="nav">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taylor-Bird Wedding 2020</title>
+  <meta name="description" content="The Taylor-Bird Wedding Info">
+  <link rel="shortcut icon" href="#">
+  <link href="./styles/css/bootstrap-grid.css" type="text/css" rel="stylesheet">
+  <link href="./styles/scss/styles.css" type="text/css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Cormorant+Garamond:wght@300;400;500;600;700|Poppins:100;300;400;600;800|Playfair+Display:400,500,700,900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
 
-          <!-- List Items -->
-          <div class="nav__list nav__list--default">
-            <a class="nav__list__item" href="#venue">The Venue</a>
-            <a class="nav__list__item" href="#accomodation">Where To Stay</a>
-            <a class="nav__list__item" href="#info">Info</a>
-            <a class="nav__list__item" href="#rsvp">RSVP</a>
-            <!-- <a class="nav__rsvp nav__rsvp--list" href="#rsvp">RSVP</a> -->
-          </div>
 
-          <!-- Mobile - Icon -->
-          <a class="nav__section nav__burger nav__burger--default">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
 
-          <!-- RSVP -->
-          <!-- <a class="nav__section nav__rsvp nav__rsvp--desktop">RSVP</a> -->
-          
-        </nav>
-        <!-- Main content  -->
-        <main>
-          <div class="image">
-            <div class="info">
-              <p class="info__text centre">•14•11•2020</p>
-              <h1 class="intro centre">Adam & Helen</h1>
-              <p class="info__text centre">Are getting married</p>
-            </div>
-          </div>
-          <div class="container invite" id="venue">
-            <div class="row">
-              <div class="col-1"></div>
-              <div class="col-10">
-                <p class="invite__celebrate"> Adam & Helen <br>  Invite you to join them for the celebration of their marriage</p>
-              </div>
-              <div class="col-1"></div>
-            </div>
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <p class="invite__subtitle">Where?</p>
-                <p class="invite__info">Wyresdale Park<br>Snowhill Lane<br>Preston<br>Lancashire<br>PR3 1BA</p>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <p class="invite__subtitle">When?</p>
-                <p class="invite__info"> 14th November 2020. <br> We ask that all Guests arrive at 12 Midday. The Ceremony will begin at 1 O'Clock. Wedding Breakfast & Reception to follow</p>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid accomodation" id="accomodation">
-            <div class="container">
-              <p class="black">Where to stay</p>
-              <p class="title">Accommodation</p>
-              <p class="black">The accommodation listed below are displayed in order nearest to the venue</p>
-              <ul>
-                <li><a href="http://www.theprioryscorton.co.uk/" target="_blank">Priory Inn Hotel</a></li>
-                <li><a href="https://www.middlehollycottage.co.uk/" target="_blank">Middle Holly Cottage</a></li>
-                <li><a href="https://www.middlehollycottage.co.uk/" target="_blank">Lancaster Barn</a></li>
-                <li><a href="https://englishlakes.co.uk/lancaster-house/" target="_blank">Lancaster House Hotel</a></li>
-                <li><a href="https://www.royaloakgarstang.co.uk/index.html" target="_blank">Royal Oak Hotel</a></li>
-                <li><a href="https://www.croftershotel.co.uk/hotel-garstang.php" target="_blank">The Crofters Hotel</a></li>
-                <li><a href="https://www.bestwestern.co.uk/hotels/best-western-garstang-country-hotel-and-golf-club-83877" target="_blank">Best Western Garstang</a></li>
-                <li><a href="https://fleeceinn.co.uk/" target="_blank">The Fleece Inn</a></li>
-                <li><a href="https://www.premierinn.com/gb/en/hotels/england/lancashire/preston/preston-north.html/" target="_blank">Premier Inn - Bilsborrow</a></li>
-                <li><a href="http://www.guysthatchedhamlet.co.uk/" target="_blank">Guys Thatched Hamlet</a></li>
+    <!-- List Items -->
+    <div class="nav__list nav__list--default">
+      <a class="nav__list__item" href="#venue">The Venue</a>
+      <a class="nav__list__item" href="#accomodation">Where To Stay</a>
+      <a class="nav__list__item" href="#info">Info</a>
+      <a class="nav__list__item" href="#rsvp">RSVP</a>
+      <!-- <a class="nav__rsvp nav__rsvp--list" href="#rsvp">RSVP</a> -->
+    </div>
 
-              </ul>
-            </div>
-          </div>
-          <div class="container-fluid transport" id="info">
-            <div class="container">
-              <p class="black">Getting Home Safe</p>
-              <p class="title">Transport</p>
-              <p class="black">We also recommend the following local taxi services to help you get from A to B. <br>Taxi services are limited in this area so pre-booking is essential:</p>
-            
-             
-              <ul>
-                <li>Garstang Cars - 01995 601 111</li>
-                <li>Lancaster Taxis - 01524 912 323</li>
-                <li>A1 Taxis - 01524 356 66</li>
-                <li>Coastal Taxis - 01524 600 00</li>
-              </ul>
-            
-         
-          </div>
-          </div>
-          <div class="container-fluid accomodation">
-            <div class="container">
-              <div class="row">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <p class="title">Children</p>
-              <p class="black">As much as we would like to invite all the children of our friends, it is only possible to accommodate the children of close family.</p>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <p class="title">A Note on Gifts</p>
-              <p class="black">If you were thinking of giving a gift to help us on our way, a gift of cash towards our honeymoon would really make our day. However, if you would prefer to purchase a gift, feel free to surprise us in your own way.</p>
-            </div>
-            </div>
-          </div>
-          </div>
-         
-          <!-- RSVP -->
-          <div class="container" id="rsvp">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="rsvp__logo">
-                  <p>R&nbsp&nbsp.&nbsp&nbspS</p>
-                </div>
-                <div class="rsvp__logo">
-                  <p>V&nbsp&nbsp.&nbsp&nbspP</p>
-                </div>
-                <p class="rsvp__text">We look forward to seeing you! If you have specific dietary requirements, please make sure you let us know.</p>
-                <p class="rsvp__kindly">Kindly RSVP by August 14th 2020</p>
-              </div>
+    <!-- Mobile - Icon -->
+    <a class="nav__section nav__burger nav__burger--default">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
 
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                  <input type="text" name="name" />
-                  <select name="Attending" id="attending" placeholder="Choose one" required>
-                          <option value="Yes">Yes</option>
-                          <option value="No">No</option>
-                        </select>
-                  <input type="email" name="email" />
-                  <textarea name="message"></textarea>
-                  <select name="Starter" id="starter" placeholder="Select Starter" required>
-                    <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
-                    <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
-                    <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
-                    <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
-                    <option value="kids">Kids</option>
-                  </select>
-                  <select name="Main" id="main" placeholder="Select Main Course" required>
-                    <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
-                    <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
-                    <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
-                    <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
-                    <option value="kids">Kids</option>
-                  </select>
-                  <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
-                    <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
-                    <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
-                    <option value="Cheescake">Winter Berry Cheesecake</option>
-                    <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
-                    <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
-                    <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
-                    <option value="Kids">Kids</option>
-                  </select>
-                </form>
-            
-                <div id="root"></div>
-                <script type="text/babel">
-            
-                  ReactDOM.render(
-                    <form name="contact" method="post">
-                      <input type="hidden" name="form-name" value="contact" />
-                      <p> Guest 1 </p>
-                      <p>
-                        <label>Your Name: <input type="text" name="name"/></label>
-                      </p>
-                      <p>
-                        <label>Are You Attending?: <div class="custom-select">
-                          <select name="Attending" id="attending" placeholder="Choose one" required>
-                          <option value="Yes">Yes</option>
-                          <option value="No">No</option>
-                        </select>
-                          </div></label>
-                      </p>
-                      <p>
-                        <label>Your Email: <input type="email" name="email"/></label>
-                      </p>
-                      <p>
-                        <label>Starter Choice: <div class="custom-select">
-                            <select name="Starter" id="starter" placeholder="Select Starter" required>
-                              <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
-                              <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
-                              <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
-                              <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
-                              <option value="kids">Kids</option>
-                            </select>
-                          </div></label>
-                      </p>
-                      <p>
-                        <label>Main Course Choice: <div class="custom-select">
-                          <select name="Main" id="main" placeholder="Select Main Course" required>
-                            <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
-                            <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
-                            <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
-                            <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
-                            <option value="kids">Kids</option>
-                        </select>
-                          </div></label>
-                      </p>
-                      <p>
-                        <label>Dessert Choice: <div class="custom-select">
-                          <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
-                    <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
-                    <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
-                    <option value="Cheescake">Winter Berry Cheesecake</option>
-                    <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
-                    <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
-                    <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
-                    <option value="Kids">Kids</option>
-                  </select>
-                          </div></label>
-                      </p>
-                      <p>
-                        <label>Any Dietary Requirements?: <textarea name="message"></textarea></label>
-                      </p>
-                      <p>
-                        <button type="submit">Send</button>
-                      </p>
-                    </form>,
-                    document.getElementById("root")
-                  );
-            
-                </script>
-                </div>
-                
-              
-            </div>
+    <!-- RSVP -->
+    <!-- <a class="nav__section nav__rsvp nav__rsvp--desktop">RSVP</a> -->
+
+  </nav>
+  <!-- Main content  -->
+  <main>
+    <div class="image">
+      <div class="info">
+        <p class="info__text centre">•14•11•2020</p>
+        <h1 class="intro centre">Adam & Helen</h1>
+        <p class="info__text centre">Are getting married</p>
+      </div>
+    </div>
+    <div class="container invite" id="venue">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <p class="invite__celebrate"> Adam & Helen <br> Invite you to join them for the celebration of their marriage
+          </p>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <p class="invite__subtitle">Where?</p>
+          <p class="invite__info">Wyresdale Park<br>Snowhill Lane<br>Preston<br>Lancashire<br>PR3 1BA</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <p class="invite__subtitle">When?</p>
+          <p class="invite__info"> 14th November 2020. <br> We ask that all Guests arrive at 12 Midday. The Ceremony
+            will begin at 1 O'Clock. Wedding Breakfast & Reception to follow</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid accomodation" id="accomodation">
+      <div class="container">
+        <p class="black">Where to stay</p>
+        <p class="title">Accommodation</p>
+        <p class="black">The accommodation listed below are displayed in order nearest to the venue</p>
+        <ul>
+          <li><a href="http://www.theprioryscorton.co.uk/" target="_blank">Priory Inn Hotel</a></li>
+          <li><a href="https://www.middlehollycottage.co.uk/" target="_blank">Middle Holly Cottage</a></li>
+          <li><a href="https://www.middlehollycottage.co.uk/" target="_blank">Lancaster Barn</a></li>
+          <li><a href="https://englishlakes.co.uk/lancaster-house/" target="_blank">Lancaster House Hotel</a></li>
+          <li><a href="https://www.royaloakgarstang.co.uk/index.html" target="_blank">Royal Oak Hotel</a></li>
+          <li><a href="https://www.croftershotel.co.uk/hotel-garstang.php" target="_blank">The Crofters Hotel</a></li>
+          <li><a href="https://www.bestwestern.co.uk/hotels/best-western-garstang-country-hotel-and-golf-club-83877"
+              target="_blank">Best Western Garstang</a></li>
+          <li><a href="https://fleeceinn.co.uk/" target="_blank">The Fleece Inn</a></li>
+          <li><a href="https://www.premierinn.com/gb/en/hotels/england/lancashire/preston/preston-north.html/"
+              target="_blank">Premier Inn - Bilsborrow</a></li>
+          <li><a href="http://www.guysthatchedhamlet.co.uk/" target="_blank">Guys Thatched Hamlet</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid transport" id="info">
+      <div class="container">
+        <p class="black">Getting Home Safe</p>
+        <p class="title">Transport</p>
+        <p class="black">We also recommend the following local taxi services to help you get from A to B. <br>Taxi
+          services are limited in this area so pre-booking is essential:</p>
+
+
+        <ul>
+          <li>Garstang Cars - 01995 601 111</li>
+          <li>Lancaster Taxis - 01524 912 323</li>
+          <li>A1 Taxis - 01524 356 66</li>
+          <li>Coastal Taxis - 01524 600 00</li>
+        </ul>
+
+
+      </div>
+    </div>
+    <div class="container-fluid accomodation">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p class="title">Children</p>
+            <p class="black">As much as we would like to invite all the children of our friends, it is only possible to
+              accommodate the children of close family.</p>
           </div>
-          <div class="container-fluid accomodation" id="accomodation">
-            <div class="container">
-              <p class="title">Contact</p>
-              <p class="black">If you have any questions, you can contact us on the numbers below</p>
-              <ul>
-                <li>Helen - 07530 283436</li>
-                <li>Adam - 07717 310319</li>
-                
-              </ul>
-            </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p class="title">A Note on Gifts</p>
+            <p class="black">If you were thinking of giving a gift to help us on our way, a gift of cash towards our
+              honeymoon would really make our day. However, if you would prefer to purchase a gift, feel free to
+              surprise us in your own way.</p>
           </div>
-        </main>
-        <script src="./js/nav.js"></script>
-        <script src="./js/form.js"></script>
-    </body>
+        </div>
+      </div>
+    </div>
+
+    <!-- RSVP -->
+    <div class="container" id="rsvp">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="rsvp__logo">
+            <p>R&nbsp&nbsp.&nbsp&nbspS</p>
+          </div>
+          <div class="rsvp__logo">
+            <p>V&nbsp&nbsp.&nbsp&nbspP</p>
+          </div>
+          <p class="rsvp__text">We look forward to seeing you! If you have specific dietary requirements, please make
+            sure you let us know.</p>
+          <p class="rsvp__kindly">Kindly RSVP by August 14th 2020</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="name" />
+            <!--<select name="Attending" id="attending" placeholder="Choose one" required>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>-->
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+            <!--<select name="Starter" id="starter" placeholder="Select Starter" required>
+              <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
+              <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
+              <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
+              <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
+              <option value="kids">Kids</option>
+            </select>-->
+            <!--<select name="Main" id="main" placeholder="Select Main Course" required>
+              <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
+              <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
+              <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
+              <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
+              <option value="kids">Kids</option>
+            </select>-->
+            <!--<select name="Dessert" id="dessert" placeholder="Select Main Course" required>
+              <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
+              <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
+              <option value="Cheescake">Winter Berry Cheesecake</option>
+              <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
+              <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
+              <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
+              <option value="Kids">Kids</option>
+            </select>-->
+          </form>
+
+          <div id="root"></div>
+          <script type="text/babel">
+
+            ReactDOM.render(
+              <form name="contact" method="post">
+                <input type="hidden" name="form-name" value="contact" />
+                <p> Guest 1 </p>
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                  <label>Are You Attending?: <div class="custom-select">
+                    <select name="Attending" id="attending" placeholder="Choose one" required>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                  </div></label>
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Starter Choice: <div class="custom-select">
+                    <select name="Starter" id="starter" placeholder="Select Starter" required>
+                      <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
+                      <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
+                      <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
+                      <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
+                      <option value="kids">Kids</option>
+                    </select>
+                  </div></label>
+                </p>
+                <p>
+                  <label>Main Course Choice: <div class="custom-select">
+                    <select name="Main" id="main" placeholder="Select Main Course" required>
+                      <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
+                      <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
+                      <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
+                      <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
+                      <option value="kids">Kids</option>
+                    </select>
+                  </div></label>
+                </p>
+                <p>
+                  <label>Dessert Choice: <div class="custom-select">
+                    <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
+                      <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
+                      <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
+                      <option value="Cheescake">Winter Berry Cheesecake</option>
+                      <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
+                      <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
+                      <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
+                      <option value="Kids">Kids</option>
+                    </select>
+                  </div></label>
+                </p>
+                <p>
+                  <label>Any Dietary Requirements?: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>,
+              document.getElementById("root")
+            );
+
+          </script>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="container-fluid accomodation" id="accomodation">
+      <div class="container">
+        <p class="title">Contact</p>
+        <p class="black">If you have any questions, you can contact us on the numbers below</p>
+        <ul>
+          <li>Helen - 07530 283436</li>
+          <li>Adam - 07717 310319</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="./js/nav.js"></script>
+  <script src="./js/form.js"></script>
+</body>
 
 </html>
