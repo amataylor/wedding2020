@@ -9,6 +9,9 @@
         <link href="./styles/css/bootstrap-grid.css" type="text/css" rel="stylesheet">
         <link href="./styles/scss/styles.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Cormorant+Garamond:wght@300;400;500;600;700|Poppins:100;300;400;600;800|Playfair+Display:400,500,700,900&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     </head>
     
 
@@ -103,18 +106,19 @@
           </div>
           <div class="container-fluid accomodation">
             <div class="container">
+              <div class="row">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <p class="title">Children</p>
               <p class="black">As much as we would like to invite all the children of our friends, it is only possible to accommodate the children of close family.</p>
             </div>
-          </div>
-          <div class="container-fluid transport">
-            <div class="container">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <p class="title">A Note on Gifts</p>
-              <p class="black">If you were thinking of giving a git to help u son our way, A Gift of cash towards our honeymoon would really make our day. However, if you would prefer to purchase a gift, feel free to surprise us in your own way.</p>
-            
+              <p class="black">If you were thinking of giving a gift to help us on our way, a gift of cash towards our honeymoon would really make our day. However, if you would prefer to purchase a gift, feel free to surprise us in your own way.</p>
+            </div>
+            </div>
+          </div>
+          </div>
          
-          </div>
-          </div>
           <!-- RSVP -->
           <div class="container" id="rsvp">
             <div class="row">
@@ -130,54 +134,96 @@
               </div>
 
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="outer">
-                  <input class="trigger" type="checkbox" name="field1" id="field1">
-                  <input class="trigger" type="checkbox" name="field2" id="field2">
-                  <input class="trigger" type="checkbox" name="field3" id="field3">
-                  <input class="trigger" type="checkbox" name="field4" id="field4">
-                  <label class="label-trigger" for="field1">Step 1 - Click to start</label>
-                  <form class="hidden-fields">
-                      <div class="wrap wrap1">
-                          <fieldset>
-                              <legend>Fieldset 1</legend>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                          </fieldset>
-                          <label class="label-trigger" for="field2">Click for step 2</label>
-                      </div>
-                      <div class="wrap wrap2">
-                          <fieldset>
-                              <legend>Fieldset 2</legend>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                          </fieldset>
-                          <label class="label-trigger" for="field3">Click for step 3</label>
-                      </div>
-                      <div class="wrap wrap3">
-                          <fieldset>
-                              <legend>Fieldset 3</legend>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                          </fieldset>
-                          <label class="label-trigger" for="field4">Click for step 4</label>
-                      </div>
-                      <div class="wrap wrap4">
-                          <fieldset>
-                              <legend>Fieldset 4</legend>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                              <p>some form elements here</p>
-                          </fieldset>
-                      </div>
-                  </form>
-              </div>
+                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                  <input type="text" name="name" />
+                  <select name="Attending" id="attending" placeholder="Choose one" required>
+                          <option value="pate">Yes</option>
+                          <option value="hake">No</option>
+                        </select>
+                  <input type="email" name="email" />
+                  <textarea name="message"></textarea>
+                  <select name="Starter" id="starter" placeholder="Select Starter" required>
+                    <option value="pate">Ginger Salmon</option>
+                    <option value="hake">Mushroom Pate</option>
+                    <option value="veggie">Scotch Egg</option>
+                    <option value="kids">Kids</option>
+                  </select>
+                  <select name="Main" id="main" placeholder="Select Main Course" required>
+                    <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
+                    <option value="hake">Hake</option>
+                    <option value="veggie">Veggie</option>
+                    <option value="kids">Kids</option>
+                  </select>
+                  <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
+                    <option value="beef">Brownie</option>
+                    <option value="hake">Posset</option>
+                    <option value="veggie">Ice Cream</option>
+                    <option value="kids">Kids</option>
+                  </select>
+                </form>
+            
+                <div id="root"></div>
+                <script type="text/babel">
+            
+                  ReactDOM.render(
+                    <form name="contact" method="post">
+                      <input type="hidden" name="form-name" value="contact" />
+                      <p> Guest 1 </p>
+                      <p>
+                        <label>Your Name: <input type="text" name="name"/></label>
+                      </p>
+                      <p>
+                        <label>Are You Attending?: <div class="custom-select">
+                          <select name="Attending" id="attending" placeholder="Choose one" required>
+                          <option value="pate">Yes</option>
+                          <option value="hake">No</option>
+                        </select>
+                          </div></label>
+                      </p>
+                      <p>
+                        <label>Your Email: <input type="email" name="email"/></label>
+                      </p>
+                      <p>
+                        <label>Any Dietary Requirements?: <textarea name="message"></textarea></label>
+                      </p>
+                      <p>
+                        <label>Starter Choice: <div class="custom-select">
+                          <select name="Starter" id="starter" placeholder="Select Starter" required>
+                          <option value="pate">Ginger Salmon</option>
+                          <option value="hake">Mushroom Pate</option>
+                          <option value="veggie">Scotch Egg</option>
+                          <option value="kids">Kids</option>
+                        </select>
+                          </div></label>
+                      </p>
+                      <p>
+                        <label>Main Course Choice: <div class="custom-select">
+                            <select name="Main" id="main" placeholder="Select Main Course" required>
+                                <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
+                                <option value="hake">Hake</option>
+                                <option value="veggie">Veggie</option>
+                                <option value="kids">Kids</option>
+                              </select>
+                          </div></label>
+                      </p>
+                      <p>
+                        <label>Main Course Choice: <div class="custom-select">
+                            <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
+                                <option value="beef">Brownie</option>
+                                <option value="hake">Posset</option>
+                                <option value="veggie">Ice Cream</option>
+                                <option value="kids">Kids</option>
+                              </select>
+                          </div></label>
+                      </p>
+                      <p>
+                        <button type="submit">Send</button>
+                      </p>
+                    </form>,
+                    document.getElementById("root")
+                  );
+            
+                </script>
                 </div>
                 
               
