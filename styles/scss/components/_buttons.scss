@@ -7,6 +7,7 @@ button {
     border: none;
     padding: 1rem 2rem;
     margin: 0;
+    width: 100%;
     text-decoration: none;
     background: $scarlet;
     color: #ffffff;
@@ -32,4 +33,12 @@ button:focus {
 
 button:active {
     transform: scale(0.99);
+}
+
+@media (min-width: 768px) {
+
+button {
+    width: 200px;
+}
+  
 }

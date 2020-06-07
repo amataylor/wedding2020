@@ -63,7 +63,7 @@
               </div>
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <p class="invite__subtitle">When?</p>
-                <p class="invite__info"> We ask that all Guests arrive at 12 Midday. The Ceremony will begin at 1 O'Clock. Wedding Breakfast & Reception to follow</p>
+                <p class="invite__info"> 14th November 2020. <br> We ask that all Guests arrive at 12 Midday. The Ceremony will begin at 1 O'Clock. Wedding Breakfast & Reception to follow</p>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@
             <div class="container">
               <p class="black">Where to stay</p>
               <p class="title">Accommodation</p>
-              <p class="black">The accomodations listed below are displayed in distance nearest to the venue</p>
+              <p class="black">The accommodation listed below are displayed in order nearest to the venue</p>
               <ul>
                 <li><a href="http://www.theprioryscorton.co.uk/" target="_blank">Priory Inn Hotel</a></li>
                 <li><a href="https://www.middlehollycottage.co.uk/" target="_blank">Middle Holly Cottage</a></li>
@@ -129,36 +129,41 @@
                 <div class="rsvp__logo">
                   <p>V&nbsp&nbsp.&nbsp&nbspP</p>
                 </div>
-                <p class="rsvp__text">We look forward to seeing you! If you have specific dietary requirements, please make sure it’s noted below.</p>
-                <p class="rsvp__kindly">Kindly RSVP by August 31st</p>
+                <p class="rsvp__text">We look forward to seeing you! If you have specific dietary requirements, please make sure you let us know.</p>
+                <p class="rsvp__kindly">Kindly RSVP by August 14th 2020</p>
               </div>
 
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <form name="contact" netlify netlify-honeypot="bot-field" hidden>
                   <input type="text" name="name" />
                   <select name="Attending" id="attending" placeholder="Choose one" required>
-                          <option value="pate">Yes</option>
-                          <option value="hake">No</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
                         </select>
                   <input type="email" name="email" />
                   <textarea name="message"></textarea>
                   <select name="Starter" id="starter" placeholder="Select Starter" required>
-                    <option value="pate">Ginger Salmon</option>
-                    <option value="hake">Mushroom Pate</option>
-                    <option value="veggie">Scotch Egg</option>
+                    <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
+                    <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
+                    <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
+                    <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
                     <option value="kids">Kids</option>
                   </select>
                   <select name="Main" id="main" placeholder="Select Main Course" required>
                     <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
-                    <option value="hake">Hake</option>
-                    <option value="veggie">Veggie</option>
+                    <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
+                    <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
+                    <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
                     <option value="kids">Kids</option>
                   </select>
                   <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
-                    <option value="beef">Brownie</option>
-                    <option value="hake">Posset</option>
-                    <option value="veggie">Ice Cream</option>
-                    <option value="kids">Kids</option>
+                    <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
+                    <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
+                    <option value="Cheescake">Winter Berry Cheesecake</option>
+                    <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
+                    <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
+                    <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
+                    <option value="Kids">Kids</option>
                   </select>
                 </form>
             
@@ -175,8 +180,8 @@
                       <p>
                         <label>Are You Attending?: <div class="custom-select">
                           <select name="Attending" id="attending" placeholder="Choose one" required>
-                          <option value="pate">Yes</option>
-                          <option value="hake">No</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
                         </select>
                           </div></label>
                       </p>
@@ -184,37 +189,42 @@
                         <label>Your Email: <input type="email" name="email"/></label>
                       </p>
                       <p>
-                        <label>Any Dietary Requirements?: <textarea name="message"></textarea></label>
+                        <label>Starter Choice: <div class="custom-select">
+                            <select name="Starter" id="starter" placeholder="Select Starter" required>
+                              <option value="Pate Chicken Liver">Chicken Liver Pate w/ Caramelised Onions</option>
+                              <option value="Gin Salmon">Gin Cured Salmon w/ Watercress</option>
+                              <option value="Pate Mushroom">Mushroom Pate w/ Caramelised Onions</option>
+                              <option value="Scotch Egg">Scotch Egg w/ English Mustard Dressing</option>
+                              <option value="kids">Kids</option>
+                            </select>
+                          </div></label>
                       </p>
                       <p>
-                        <label>Starter Choice: <div class="custom-select">
-                          <select name="Starter" id="starter" placeholder="Select Starter" required>
-                          <option value="pate">Ginger Salmon</option>
-                          <option value="hake">Mushroom Pate</option>
-                          <option value="veggie">Scotch Egg</option>
-                          <option value="kids">Kids</option>
+                        <label>Main Course Choice: <div class="custom-select">
+                          <select name="Main" id="main" placeholder="Select Main Course" required>
+                            <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
+                            <option value="hake">Hake Filet, Bisque Beurre Blanc w/ Tenderstem</option>
+                            <option value="Chicken">Fresh Trimmed Chicken Breast, Rosemary Potatoes, Veg w/ Chicken Jus</option>
+                            <option value="veggie">Vegan Wellington w/ Mashed Potato , Mushroom Jus</option>
+                            <option value="kids">Kids</option>
                         </select>
                           </div></label>
                       </p>
                       <p>
-                        <label>Main Course Choice: <div class="custom-select">
-                            <select name="Main" id="main" placeholder="Select Main Course" required>
-                                <option value="beef">Feather Blade Beef w/ Dauphinoise</option>
-                                <option value="hake">Hake</option>
-                                <option value="veggie">Veggie</option>
-                                <option value="kids">Kids</option>
-                              </select>
+                        <label>Dessert Choice: <div class="custom-select">
+                          <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
+                    <option value="Salted Carame">Salted Caramel Chocolate Pot</option>
+                    <option value="Posset">Lemon Posset w/ Earlgrey Shortbread</option>
+                    <option value="Cheescake">Winter Berry Cheesecake</option>
+                    <option value="Vegan Salted Carame">VEGAN Salted Caramel Chocolate Pot</option>
+                    <option value="Vegan Posset">VEGAN Lemon Posset w/ Earlgrey Shortbread</option>
+                    <option value="Vegan Cheescake">VEGAN Winter Berry Cheesecake</option>
+                    <option value="Kids">Kids</option>
+                  </select>
                           </div></label>
                       </p>
                       <p>
-                        <label>Main Course Choice: <div class="custom-select">
-                            <select name="Dessert" id="dessert" placeholder="Select Main Course" required>
-                                <option value="beef">Brownie</option>
-                                <option value="hake">Posset</option>
-                                <option value="veggie">Ice Cream</option>
-                                <option value="kids">Kids</option>
-                              </select>
-                          </div></label>
+                        <label>Any Dietary Requirements?: <textarea name="message"></textarea></label>
                       </p>
                       <p>
                         <button type="submit">Send</button>
@@ -227,6 +237,17 @@
                 </div>
                 
               
+            </div>
+          </div>
+          <div class="container-fluid accomodation" id="accomodation">
+            <div class="container">
+              <p class="title">Contact</p>
+              <p class="black">If you have any questions, you can contact us on the numbers below</p>
+              <ul>
+                <li>Helen - 07530 283436</li>
+                <li>Adam - 07717 310319</li>
+                
+              </ul>
             </div>
           </div>
         </main>
