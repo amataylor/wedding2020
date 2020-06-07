@@ -194,9 +194,7 @@
                   <form name="contact" method="post">
                     <input type="hidden" name="form-name" value="contact" />
                     <p> {this.state.guests.length} Guest(s) </p>
-                    <p>
-                      <label>Your Name: <input type="text" name="name" /></label>
-                    </p>
+                   
                     <p>
                       <label>Are You Attending?: <div class="custom-select">
                         <select name="Attending" id="attending" placeholder="Choose one" required>
@@ -211,6 +209,9 @@
                     {this.state.guests.map(guest => {
                       return <div>
                         <h1>Guest {guest}</h1>
+                        <p>
+                      <label>Your Name: <input type="text" name="name" /></label>
+                    </p>
 
                         <p>
                           <label>Guest {guest} Starter Choice: <div class="custom-select">
