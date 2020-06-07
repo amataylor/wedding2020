@@ -148,25 +148,25 @@
 
           <form name="contact" netlify netlify-honeypot="bot-field" hidden>
             <fieldset id="guest1">
-              <input type="text" name="name" id="name" />
+              <input type="text" name="Name" id="name" />
               <select name="Starter1" id="starter1" placeholder="Select Starter" required></select>
               <select name="Main1" id="main1" placeholder="Select Main Course" required></select>
               <select name="Dessert1" id="dessert1" placeholder="Select Main Course" required></select>
             </fieldset>
             <fieldset id="guest2">
-              <input type="text" name="name2" id="name2"/>
+              <input type="text" name="Name2" id="name2"/>
               <select name="Starter2" id="starter2" placeholder="Select Starter" required></select>
               <select name="Main2" id="main2" placeholder="Select Main Course" required></select>
               <select name="Dessert2" id="dessert2" placeholder="Select Main Course" required></select>
             </fieldset>
             <fieldset id="guest3">
-              <input type="text" name="name3" id="name3" />
+              <input type="text" name="Name3" id="name3" />
               <select name="Starter3" id="starter3" placeholder="Select Starter" required></select>
               <select name="Main3" id="main3" placeholder="Select Main Course" required></select>
               <select name="Dessert3" id="dessert3" placeholder="Select Main Course" required></select>
             </fieldset>
             <fieldset id="guest4">
-              <input type="text" name="name4" id="name4"/>
+              <input type="text" name="Name4" id="name4"/>
               <select name="Starter4" id="starter4" placeholder="Select Starter" required></select>
               <select name="Main4" id="main4" placeholder="Select Main Course" required></select>
               <select name="Dessert4" id="dessert4" placeholder="Select Main Course" required></select>
@@ -210,7 +210,7 @@
                       return <div>
                         <h1>Guest {guest}</h1>
                         <p>
-                      <label>Your Name: <input type="text" name="Name" id="name" /></label>
+                      <label>Your Name: {guest} <input type="text" name={"Name" + guest} /></label>
                     </p>
 
                         <p>
@@ -280,7 +280,6 @@
 
             ReactDOM.render(
               <div>
-                <h1>Form</h1>
                 <GuestForm></GuestForm>
               </div>,
               document.getElementById('root')
