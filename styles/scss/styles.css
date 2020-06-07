@@ -250,7 +250,9 @@
 }
 
 .btn {
-  padding: 8px, 16px;
+  padding: 8px, 16px 3px 16px;
+  color: #F29A8C;
+  border-bottom: 2px solid #F29A8C;
 }
 
 button {

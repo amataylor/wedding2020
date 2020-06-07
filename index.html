@@ -154,19 +154,19 @@
               <select name="Dessert1" id="dessert1" placeholder="Select Main Course" required></select>
             </fieldset>
             <fieldset id="guest2">
-              <input type="text" name="name" />
+              <input type="text" name="name2" />
               <select name="Starter2" id="starter2" placeholder="Select Starter" required></select>
               <select name="Main2" id="main2" placeholder="Select Main Course" required></select>
               <select name="Dessert2" id="dessert2" placeholder="Select Main Course" required></select>
             </fieldset>
             <fieldset id="guest3">
-              <input type="text" name="name" />
+              <input type="text" name="name3" />
               <select name="Starter3" id="starter3" placeholder="Select Starter" required></select>
               <select name="Main3" id="main3" placeholder="Select Main Course" required></select>
               <select name="Dessert3" id="dessert3" placeholder="Select Main Course" required></select>
             </fieldset>
             <fieldset id="guest4">
-              <input type="text" name="name" />
+              <input type="text" name="name4" />
               <select name="Starter4" id="starter4" placeholder="Select Starter" required></select>
               <select name="Main4" id="main4" placeholder="Select Main Course" required></select>
               <select name="Dessert4" id="dessert4" placeholder="Select Main Course" required></select>
@@ -210,7 +210,7 @@
                       return <div>
                         <h1>Guest {guest}</h1>
                         <p>
-                      <label>Your Name: <input type="text" name="name" /></label>
+                      <label>Your Name: <input type="text" name={"name" + guest} id={"starter" + guest} /></label>
                     </p>
 
                         <p>
@@ -257,7 +257,7 @@
 
                     </div>
                     <p>
-                      {this.state.guests.length < 4 && <div type="submit"
+                      {this.state.guests.length < 4 && <div class="btn" type="submit"
                         onClick={() => {
                           const newGuest = this.state.guests.length + 1;
                           const guests = this.state.guests;
