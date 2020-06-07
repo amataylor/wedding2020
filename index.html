@@ -211,6 +211,7 @@
                     {this.state.guests.map(guest => {
                       return <div>
                         <h1>Guest {guest}</h1>
+
                         <p>
                           <label>Guest {guest} Starter Choice: <div class="custom-select">
                             <select name={"Starter" + guest} id={"starter" + guest} placeholder="Select Starter" required>
@@ -251,22 +252,28 @@
                         </p>
                       </div>
                     })}
+                    <div>
 
+                    </div>
+                    <p>
+                      {this.state.guests.length < 4 && <div type="submit"
+                        onClick={() => {
+                          const newGuest = this.state.guests.length + 1;
+                          const guests = this.state.guests;
+                          guests.push(newGuest);
+                          this.setState({ guests });
+                        }}>
+
+                        Add Guest {this.state.guests.length + 1}
+                      </div>
+                      }
+
+                    </p>
                     <p>
                       <button type="submit">Send</button>
                     </p>
                   </form>
-                  <p>
-                    <button type="submit" onClick={() => {
-                      const newGuest = this.state.guests.length + 1;
-                      const guests = this.state.guests;
-                      guests.push(newGuest);
-                      this.setState({ guests });
-                    }}>
-                      Add Guest {this.state.guests.length + 1}
-                    </button>
-                  </p>
-                </div>
+                </div >
               }
             };
 
